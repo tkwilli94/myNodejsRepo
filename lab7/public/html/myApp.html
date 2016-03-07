@@ -1,0 +1,104 @@
+<!--Weather Underground API Key 59d80ca1c43a9669-->
+<!--Google Javascript API Key AIzaSyDeXWwyj2KUoJjSIzjkEoBgXx1toW4flpU-->
+<html>
+<head>
+	<title>City Finder</title>
+	<style>
+	#map {
+		height: 50%;
+		width: 25%;
+	}
+	</style>
+	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDeXWwyj2KUoJjSIzjkEoBgXx1toW4flpU"></script>
+	<script type="text/javascript">
+		function initializeMap() {
+			var mapOptions = {
+				center: new google.maps.LatLng(40.22052002, -111.69313812),
+				zoom: 12,
+				mapTypeId: google.maps.MapTypeId.ROADMAP
+			};
+			var map = new google.maps.Map(document.getElementById('map'), mapOptions);
+		}
+	</script>
+	<script>
+		function setMap(lat, lng) {
+			var mapOptions = {
+				center: new google.maps.LatLng(lat, lng),
+				zoom: 12,
+				mapTypeId: google.maps.MapTypeId.ROADMAP
+			};
+			var map = new google.maps.Map(document.getElementById('map'), mapOptions);
+		}
+
+	</script>
+<script>
+$(document).ready(function() {
+  $("#cityfield").keyup(function() {
+    var url = "http://52.90.205.225:3000/getcity?q="+$("#cityfield").val();
+    console.log("URL: "+url);
+    $.getJSON(url,function(data) {
+      var everything;
+      everything = "<ul>";
+      $.each(data, function(i,item) {
+        everything += "<li> "+data[i].city;
+      });
+      everything += "</ul>";
+      $("#txtHint").html(everything);
+    })
+    .done(function() { console.log('getJSON request succeeded!'); })
+    .fail(function(jqXHR, textStatus, errorThrown) { 
+      console.log('getJSON request failed! ' + textStatus); 
+      console.log("incoming "+jqXHR.responseText);
+    })
+    .always(function() { console.log('getJSON request ended!');
+    })
+    .complete(function() { console.log("complete"); });
+  });
+
+  $("#button").click(function(e){
+    var value = $("#cityfield").val();
+    var myurl= "https://api.wunderground.com/api/59d80ca1c43a9669/geolookup/conditions/q/UT/";
+    myurl += value;
+    myurl += ".json";
+    console.log(myurl);
+    $("#dispcity").text(value);
+    $.ajax({
+      url : myurl,
+      dataType : "jsonp",
+      success : function(parsed_json) {
+        var location = parsed_json['location']['city'];
+        var temp_string = parsed_json['current_observation']['temperature_string'];
+        var current_weather = parsed_json['current_observation']['weather'];
+        everything = "<ul>";
+        everything += "<li>Location: "+location;
+        everything += "<li>Temperature: "+temp_string;
+        everything += "<li>Weather: "+current_weather;
+        everything += "</ul>";
+        $("#weather").html(everything);
+	var city_lat = parsed_json['current_observation']['display_location']['latitude'];
+	var city_lng = parsed_json['current_observation']['display_location']['longitude'];
+	setMap(city_lat, city_lng);
+      }
+    });
+    e.preventDefault();
+  });
+});
+</script>
+
+</head>
+<body>
+    <form>
+        Enter A Utah City: <input type="text" id="cityfield" value=""><br>
+        Suggestion: <span id="txtHint">Empty</span>
+        <input id="button" type="submit" value="Submit">
+    </form>
+    <p>City</p>
+    <textarea id="dispcity">No City</textarea>
+    <p>Current Weather</p>
+    <div id="weather">No weather</div>
+    <div id="map">No map</div>
+    
+
+</body>
+</html>

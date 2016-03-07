@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Tommy Williams CS360 Website</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <style>
+    body {
+      background-color: #667f99;
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span> 
+      </button>
+      <a class="navbar-brand" href="index.html">CS360</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="aboutMe.html">About Me</a></li>
+        <li><a href="Resume.html">Resume</a></li>
+        <li><a href="weather.html">Current Weather</a></li>
+        <li><a href="forecast.html">Weekly Forecast</a></li>
+        <li><a href="tutorials.html">Tutorials</a></li>
+        <li class="active"><a href="help.html">Help</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+  <div class="jumbotron">
+    <h1>Help!</h1>
+    <p>Need help with this project? Submit your info below and I'll contact you when I have time</p>
+  </div>
+  <div class="panel-group">
+    <div class="panel panel-default">
+      <div class="panel-heading"><h3>Just to prove how great I am, I'm going to show you the code for my navbar</h3></div>
+      <div class="panel-body">
+<pre>
+<-nav class="navbar navbar-inverse">
+  <-div class="container-fluid">
+    <-div class="navbar-header">
+      <-button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <-span class="icon-bar"><-/span>
+        <-span class="icon-bar"><-/span>
+        <-span class="icon-bar"><-/span> 
+      <-/button>
+      <-a class="navbar-brand" href="index.html">CS360<-/a>
+    <-/div>
+    <-div class="collapse navbar-collapse" id="myNavbar">
+      <-ul class="nav navbar-nav">
+        <-li><-a href="index.html">Home<-/a><-/li>
+        <-li><-a href="aboutMe.html">About Me<-/a><-/li>
+        <-li><-a href="Resume.html">Resume<-/a><-/li>
+        <-li><-a href="weather.html">Current Weather<-/a><-/li>
+        <-li><-a href="forecast.html">Weekly Forecast<-/a><-/li>
+        <-li><-a href="tutorials.html">Tutorials<-/a><-/li>
+        <-li class="active"><-a href="help.html">Help<-/a><-/li>
+      <-/ul>
+    <-/div>
+  <-/div>
+<-/nav>
+</pre>
+        <h6>*I added a '-' to the beginning of each tag so that it would render correctly
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading"><h3>Enter contact information here</h3></div>
+      <div class="panel-body">
+        <form role="form">
+          <div class="form-group">
+            <label for="email">First Name:</label>
+            <input type="name-first" class="form-control" id="name-first" placeholder="Enter first name">
+          </div>
+          <div class="form-group">
+            <label for="pwd">Last Name:</label>
+            <input type="name-last" class="form-control" id="name-last" placeholder="Enter last name">
+          </div>
+          <div class="form-group">
+            <label for="pwd">NetId:</label>
+            <input type="netid" class="form-control" id="netid" placeholder="Enter netId">
+          </div>
+          <div class="form-group">
+            <label for="pwd">Email:</label>
+            <input type="email" class="form-control" id="email" placeholder="Enter email">
+          </div>
+          <a href="submitted.html" class="btn btn-info" role="button">Submit!</a>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
