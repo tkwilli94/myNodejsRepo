@@ -9,6 +9,7 @@ router.get('/', function(req, res, next) {
 
 /* GET cities stuffs */
 router.get('/getcity', function(req,res,next) {
+  res.setHeader('Access-Control-Allow-Origin', '*');
   fs.readFile(__dirname + '/cities.dat.txt',function(err,data) {
     if(err) throw err;
     var cities = data.toString().split("\n");
