@@ -1,0 +1,17 @@
+nohup: ignoring input
+npm ERR! Linux 3.13.0-71-generic
+npm ERR! argv "/opt/bitnami/nodejs/bin/.node.bin" "/opt/bitnami/nodejs/bin/npm" "start"
+npm ERR! node v5.1.1
+npm ERR! npm  v3.3.12
+npm ERR! path /opt/bitnami/apache2/htdocs/myNodejsRepo/package.json
+npm ERR! code ENOENT
+npm ERR! errno -2
+npm ERR! syscall open
+
+npm ERR! enoent ENOENT: no such file or directory, open '/opt/bitnami/apache2/htdocs/myNodejsRepo/package.json'
+npm ERR! enoent This is most likely not a problem with npm itself
+npm ERR! enoent and is related to npm not being able to find a file.
+npm ERR! enoent 
+
+npm ERR! Please include the following file with any support request:
+npm ERR!     /opt/bitnami/apache2/htdocs/myNodejsRepo/npm-debug.log

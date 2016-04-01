@@ -1,0 +1,7 @@
+
+> comments@0.0.0 start /opt/bitnami/apache2/htdocs/myNodejsRepo/lab8/comments
+> node ./bin/www
+
+Connected
+[0mGET / [36m304 [0m5.984 ms - -[0m
+[0mGET /javascripts/comments.js [36m304 [0m1.528 ms - -[0m

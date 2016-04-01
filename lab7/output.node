@@ -1,0 +1,116 @@
+nohup: ignoring input
+
+> lab7@0.0.0 start /opt/bitnami/apache2/htdocs/myNodejsRepo/lab7
+> node ./bin/www
+
+/^Pr/
+Price
+Providence
+Provo
+[0mGET /getcity?q=Pr [36m304 [0m11.081 ms - -[0m
+/^Pr/
+Price
+Providence
+Provo
+[0mGET /getcity?q=Pr [36m304 [0m2.907 ms - -[0m
+/^Pro/
+Providence
+Provo
+[0mGET /getcity?q=Pro [36m304 [0m1.365 ms - -[0m
+/^G/
+Garden City
+Garland
+Garrison
+Glendale
+Glenwood
+Goshen
+Grantsville
+Green River
+Greenville
+Greenwich
+Grouse Creek
+Gunlock
+Gunnison
+Gusher
+[0mGET /getcity?q=G [32m200 [0m0.895 ms - 291[0m
+[0mGET /test1.html [32m200 [0m3.063 ms - 328[0m
+[0mGET /test2.txt [32m200 [0m1.090 ms - 83[0m
+[0mGET /test3.gif [32m200 [0m0.492 ms - 12855[0m
+[0mGET /test4.jpg [32m200 [0m0.501 ms - 51793[0m
+/^Pr/
+Price
+Providence
+Provo
+[0mGET /getcity?q=Pr [36m304 [0m0.688 ms - -[0m
+/^Pr/
+Price
+Providence
+Provo
+[0mGET /getcity?q=Pr [36m304 [0m0.666 ms - -[0m
+/^Pr/
+Price
+Providence
+Provo
+[0mGET /getcity?q=Pr [36m304 [0m1.343 ms - -[0m
+/^Pr/
+Price
+Providence
+Provo
+[0mGET /getcity?q=Pr [36m304 [0m1.109 ms - -[0m
+/^P/
+Panguitch
+Paradise
+Paragonah
+Park City
+Park Valley
+Parowan
+Payson
+Peoa
+Pine Valley
+Pleasant Grove
+Plymouth
+Portage
+Price
+Providence
+Provo
+[0mGET /getcity?q=P [32m200 [0m1.334 ms - 304[0m
+/^P/
+Panguitch
+Paradise
+Paragonah
+Park City
+Park Valley
+Parowan
+Payson
+Peoa
+Pine Valley
+Pleasant Grove
+Plymouth
+Portage
+Price
+Providence
+Provo
+[0mGET /getcity?q=P [36m304 [0m1.219 ms - -[0m
+/^Pr/
+Price
+Providence
+Provo
+[0mGET /getcity?q=Pr [32m200 [0m0.836 ms - 57[0m
+/^Pri/
+Price
+[0mGET /getcity?q=Pri [32m200 [0m1.466 ms - 18[0m
+/^Pric/
+Price
+[0mGET /getcity?q=Pric [32m200 [0m1.026 ms - 18[0m
+/^Price/
+Price
+[0mGET /getcity?q=Price [32m200 [0m0.679 ms - 18[0m
+/^Pr/
+Price
+Providence
+Provo
+[0mGET /getcity?q=Pr [36m304 [0m1.169 ms - -[0m
+[0mGET / [36m304 [0m1.537 ms - -[0m
+[0mGET / [36m304 [0m0.390 ms - -[0m
+[0mGET /favicon.ico [33m404 [0m12.639 ms - 1146[0m
+[0mGET / [36m304 [0m0.299 ms - -[0m

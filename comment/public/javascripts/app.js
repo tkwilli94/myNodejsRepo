@@ -19,7 +19,7 @@ angular.module('comment', [])
       });
     };
     $scope.incrementUpvotes = function(comment) {
-      comment.upvotes(comment);
+      $scope.upvote(comment);
     };
     $scope.getAll = function() {
       return $http.get('/comments').success(function(data){
